@@ -39,4 +39,4 @@ This project is licensed under the MIT License.
 Belal Abulabn
 
 ## Support
-For support, please contact [Belal.abulabn]
+For support, please contact [Belal.abulabn@gmail.com]
