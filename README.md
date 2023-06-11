@@ -43,6 +43,33 @@ This hardware part interacts with different peripherals such as ADCs (Analog to 
 ### Code Overview
 - `main.c` is the entry point of the program and contains the main function. This file initializes the hardware and runs an infinite loop to read user inputs and handle other functions.
 - `config.c` contains the setup for different peripherals like Timer, USART, DMA, ADC, etc. This file is crucial for configuring the hardware.
+- `control.c`
+
+### control.c
+
+#### Key Components
+
+- **ADC**: The file is responsible for handling Analog to Digital Conversion (ADC).
+- **RS232**: Serial communication through RS232 is implemented here.
+- **Control Loop**: The control loop essential for the actuator regulation is found in this file.
+- **Timers**: This file contains functions and configurations for various timers.
+- **LED Control**: Functions to control LEDs are included.
+- **DAC**: Functions for setting DAC outputs.
+- **Power Control**: Functions for enabling and disabling power supplies.
+
+#### Functions
+
+Some key functions included in this file are:
+
+- `init_SmartControl`: Initializes the hardware for the SmartControl project.
+- `controlLoop`: Main control loop of the program. Additional functions for actuator regulation should be added here.
+- `dummyLoop`: A demo function for LED control.
+- `USART_SendText`: Function to send text over USART.
+- `usartReceived`: Evaluates user input commands via RS232 connection.
+- `DAC_Set_Output`: Sets the output for the DAC.
+- `EN_PWR`: Enables the power supply.
+- `Disable_PWR`: Disables the power supply.
+- `ADC_Save_Values_In_Cache`: Saves ADC values in cache
 
 ### USART Configuration
 - Configuration for USART1 on GPIOA is done to use Pin 9 for transmitting data and Pin 10 for receiving data.
