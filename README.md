@@ -43,7 +43,9 @@ This hardware part interacts with different peripherals such as ADCs (Analog to 
 ### Code Overview
 - `main.c` is the entry point of the program and contains the main function. This file initializes the hardware and runs an infinite loop to read user inputs and handle other functions.
 - `config.c` contains the setup for different peripherals like Timer, USART, DMA, ADC, etc. This file is crucial for configuring the hardware.
-- `control.c`
+- `control.c`is responsible for handling Analog to Digital Conversion (ADC), serial communication through RS232, the main control loop of the program, timers, LED control, DAC outputs, and power control.
+-  `pwm.c` contains the implementation for controlling the two full bridges. The change of the PWM speed can be adjusted by changing the `tim_period` value.
+
 
 ### control.c
 
